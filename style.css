@@ -1,0 +1,11 @@
+.navbar__logo__ima {
+  width: 16px;
+  height: 16px;
+}
+
+.strength__icon {
+  /* it should be visible horizontally */
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
