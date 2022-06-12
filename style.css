@@ -6,11 +6,21 @@
 .strength__icon {
   /* it should be visible horizontally */
   display: flex;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 150px;
 }
 
 .project__link__img {
   width: 100px;
+  height: 150px;
+}
+
+.testimonial__avatar {
+  width: 100px;
   height: 100px;
+}
+
+.contact__img {
+  width: 80px;
+  height: 80px;
 }
