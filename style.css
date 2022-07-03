@@ -13,6 +13,7 @@
   --ft-light-yellow: #ffd95b;
   --ft-dark-olive: #827717;
   --ft-light-olive: #f8ffd7;
+  --ft-dark-pink: #c9b2ba;
 
   --skillset-dark: #a0af22;
   --skillset-medium: #d4e157;
@@ -69,7 +70,8 @@ h1 {
   font-family: "Shadows Into Light", cursive;
   font-size: var(--font-semi-large);
   font-weight: var(--weight-regular);
-  padding: 22px;
+  padding: 20px;
+  margin: 12px 0px;
   margin: auto;
 }
 
@@ -102,10 +104,12 @@ ul {
 
 #navbar {
   display: flex;
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 8px;
-  background-color: var(--light-brown);
+  /* background-color: var(--light-brown); */
 }
 
 .navbar__logo {
@@ -130,10 +134,18 @@ ul {
   padding: 4px 8px;
   margin: 4px 8px;
   cursor: pointer;
+  color: var(--ft-dark-brown);
 }
 
 .navbar__menu__item:hover {
-  color: var(--ft-romantic-brown);
+  color: var(--ft-milk-chocolate);
+}
+
+/** Linked to Js */
+#navbar.navbar__dark {
+  background-color: var(--ft-dark-pink);
+  padding: 2px;
+  opacity: 0.5;
 }
 
 /* Intro */
@@ -142,6 +154,7 @@ ul {
   background: url(image/intro-background.png) center/cover no-repeat;
   padding: 50px;
   text-align: center;
+  padding-top: 100px;
 }
 
 .jiwon__avatar {
