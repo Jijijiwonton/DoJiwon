@@ -10,6 +10,18 @@
   --ft-milk-chocolate: #a98274;
   --ft-medium-dark-black: #212121;
   --ft-romantic-brown: #bcaaa4;
+  --ft-light-yellow: #ffd95b;
+  --ft-dark-olive: #827717;
+  --ft-light-olive: #f8ffd7;
+
+  --skillset-dark: #a0af22;
+  --skillset-medium: #d4e157;
+  --skillset-light: #ffff89;
+
+  --project-dark: #6f79a8;
+  --project-medium: #9fa8da;
+  --project-light: #d1d9ff;
+  --project-extereme-light: #f8fdff;
 
   /* color reset */
   --chocolate: #4e342e;
@@ -37,7 +49,11 @@
   --regular: 18px;
   --small: 16px;
   --micro: 14px;
+
+  /* Animation duration */
+  --animation-duration: 300ms;
 }
+
 /* Universal Tag */
 * {
   --box-sizing: border-box;
@@ -53,20 +69,18 @@ h1 {
   font-family: "Shadows Into Light", cursive;
   font-size: var(--font-semi-large);
   font-weight: var(--weight-regular);
+  padding: 22px;
+  margin: auto;
+}
+
+h3 {
+  margin: auto;
+  padding: 12px;
 }
 
 a {
   text-decoration: none;
   color: var(--chocolate);
-}
-
-/* Typography */
-
-.skillset {
-  font-size: var(--font-medium);
-  font-weight: var(--font-regular);
-  color: var(--ft-milk-chocolate);
-  border: solid 1px var(--bg-light-yellowish);
 }
 
 p {
@@ -77,10 +91,6 @@ p {
 
 li {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: inline;
-  justify-content: center;
   color: var(--ft-medium-dark-black);
 }
 
@@ -93,9 +103,9 @@ ul {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--light-brown);
   align-items: center;
   padding: 8px;
+  background-color: var(--light-brown);
 }
 
 .navbar__logo {
@@ -129,41 +139,214 @@ ul {
 /* Intro */
 
 #Intro {
-  background-color: var(--dark-beige);
-  padding: 16px;
+  background: url(image/intro-background.png) center/cover no-repeat;
+  padding: 50px;
   text-align: center;
 }
 
-.Intro__main__sentence {
-  display: flex;
-  justify-content: center;
-}
-
-#professional__jiwon {
+.jiwon__avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
 }
 
-.strength__icon {
-  /* it should be visible horizontally */
+/** Section */
+.section {
+  text-align: center;
+  padding: 30px;
+  /** just define another div and then only apply for it */
+  /* max-width: 1200px; */
+  margin: auto;
+}
+
+.section__container {
+  margin: auto;
+  max-width: 1100px;
+}
+
+/** About */
+.about__strength {
   display: flex;
-  width: 80px;
-  height: 150px;
+  justify-content: space-between;
+  margin: 60px 0;
 }
 
-/* About */
+.strength__icon {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  font-size: 60px;
+  margin: auto;
+  border: 1px dotted;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  color: var(--ft-milk-chocolate);
+}
+
+.strength__title,
+.strength_description {
+  color: var(--ft-medium-dark-black);
+  margin: 12px;
+}
+
+.strength__description {
+  font-size: var(--font-micro);
+}
+.strength__icon:hover i {
+  color: var(--ft-light-yellow);
+  transform: rotate(-30deg) scale(1.2);
+}
+
+.strength__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__description {
+  margin: 0px 12px;
+  text-align: left;
+}
+
+.job__title,
+.job__period {
+  color: var(--ft-medium-dark-black);
+}
+
+.job__title {
+  font-size: var(--font-small);
+}
+
+.job__period {
+  font-size: var(--font-micro);
+}
+
+/** technical */
+#skills {
+  background-color: var(--ft-light-yellow);
+}
+
+.skills_overall {
+  display: flex;
+  background-color: var(--skillset-light);
+  margin: 20px;
+}
+
+.skills_left {
+  flex-basis: 60%;
+  background-color: var(--skillset-dark);
+}
+
+.skills_right {
+  flex-basis: 40%;
+}
+
+.skills {
+  margin: 12px;
+  padding: 6px;
+}
+
+.skills_tools {
+  background-color: var(--skillset-medium);
+  padding: 0px;
+}
+
+.skills_soft {
+  background-color: var(--skillset-light);
+}
+
+.skills__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills_bar {
+  width: 100%;
+  height: 4px;
+  background-color: var(--ft-light-olive);
+}
+
+.skills_value {
+  height: 4px;
+  background-color: var(--bg-dark-beige);
+}
+
+.skills_tools,
+.skills_soft {
+  padding: 15px;
+}
+
+/** Project */
+#project {
+  background-color: var(--project-light);
+}
+.category__btn {
+  border: 1px solid var(--ft-medium-dark-black);
+  border-radius: 5%;
+  padding: 8px 30px;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.category__btn:hover {
+  background-color: var(--project-medium);
+  color: var(--project-extereme-light);
+  font-family: "Shadows Into Light", cursive;
+}
+
+.project__category {
+  margin: 20px;
+}
+
+.category__count {
+  background-color: var(--project-dark);
+  border-radius: 50%;
+  color: var(--project-extereme-light);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin: 0px 8px;
+}
+
+.project__display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project__link {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 2px;
+  background-color: var(--project-extereme-light);
+}
+
+/**If i mouse-hover it, it should display a videp
+https://stackoverflow.com/questions/38860760/on-hover-image-it-should-play-video#:~:text=SCENARIO%3A%20there%20are%204%20images%20in%20one%20row,for%20that%20particular%20image%20should%20start%20playing%20HTML%3A
+*/
 .project__link__img {
-  width: 100px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
 }
 
-.testimonial__avatar {
-  width: 100px;
-  height: 100px;
+.project__description {
+  width: 100%;
+  height: 100%;
+  background-color: var(--ft-medium-dark-black);
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--animation-duration);
 }
 
-.contact__img {
-  width: 80px;
-  height: 80px;
+.project__link:hover .project__description {
+  opacity: 0.8;
 }
