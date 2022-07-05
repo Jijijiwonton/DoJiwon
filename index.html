@@ -43,13 +43,18 @@
       </div>
       <div class="navbar__menu">
         <ul class="navbar__menu">
-          <a href=""><li class="navbar__menu__item">Intro</li></a>
-          <a href=""><li class="navbar__menu__item">About</li></a>
-          <a href=""><li class="navbar__menu__item">Technical</li></a>
-          <a href=""><li class="navbar__menu__item">Notes</li></a>
-          <a href=""><li class="navbar__menu__item">Project</li></a>
-          <a href=""><li class="navbar__menu__item">Testimonial</li></a>
-          <a href=""><li class="navbar__menu__item">Contact</li></a>
+          <li class="navbar__menu__item" data-link="#Intro">Intro</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Technical</li>
+          <!-- Notes would bring users to be in another page -->
+          <a href="notes.html" target="blank"
+            ><li class="navbar__menu__item" data-link="#Notes">Notes</li></a
+          >
+          <li class="navbar__menu__item" data-link="#project">Project</li>
+          <li class="navbar__menu__item" data-link="#testimonial">
+            Testimonial
+          </li>
+          <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
       </div>
     </nav>
@@ -459,8 +464,8 @@
     <!-- contact -->
     <section id="contact" class="section">
       <h1>Contact me</h1>
-      <div class="contact__diversity">
-        <h3>ji04wonton30@gmail.com</h3>
+      <div class="contact__info">
+        <h4>ji04wonton30@gmail.com</h4>
         <span>
           <a href="https://github.com/Jijijiwonton"
             ><img
